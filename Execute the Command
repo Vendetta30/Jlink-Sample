@@ -14,3 +14,5 @@ javac -d mods/com.greetings/ -p mods $(find src/com.greetings/ -name "*.java")
 java -p mods -m com.greetings/com.greetings.Main
 ************************ JLINK *************************
 jlink --module-path $JAVA_HOME/jmods:mlib --add-modules com.greetings --output greetingsapp
+cd greetingsapp/bin
+./java -m com.greetings/com.greetings.Main
